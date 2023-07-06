@@ -26,8 +26,7 @@ const Grid = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [categoryMessage, setCategoryMessage] = useState('');
 
-  const [Message, setMessage] = useState('');
-  const [visible, setvisible] = useState('false');
+
   
   const handleCategoryClick = (categoryName) => {
     fetch(`https://api.chucknorris.io/jokes/random?category=animal`)
