@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Grid.css';
-import Message from "./Message";
+
 
 
 const Grid = () => {
