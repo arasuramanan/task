@@ -79,5 +79,20 @@ body{
 }
 
 .category-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px;
   text-align: center;
+  max-width: 400px;
+}
+.close-button{
+  position: fixed;
+  top: 48%;
+  left: 63%;
+  transform: translate(-50%, -50%);
+  color: black;
 }

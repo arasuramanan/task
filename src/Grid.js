@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Grid.css';
-import Message from './Message';
-
+import Message from "./Message";
 
 
 const Grid = () => {
@@ -26,12 +25,12 @@ const Grid = () => {
 
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [categoryMessage, setCategoryMessage] = useState('');
-  
-  const [Message, useState] = useState('');
-  const [Visible, useVisible] = useState('');
 
+  const [Message, setMessage] = useState('');
+  const [visible, setvisible] = useState('false');
+  
   const handleCategoryClick = (categoryName) => {
-    fetch(`https://api.chucknorris.io/jokes/random?category=food`)
+    fetch(`https://api.chucknorris.io/jokes/random?category=animal`)
       .then((response) => response.json())
       .then((data) => {
         setSelectedCategory(categoryName);
@@ -47,7 +46,6 @@ const Grid = () => {
 
   return (
     <div>
-      <Message/>
       <h1 className="heading">Chuck Norris</h1>
       <div className="grid">
         {categories.map((category, index) => (
@@ -65,7 +63,7 @@ const Grid = () => {
         <div className="modal-overlay">
           <div className="modal">
             <div className="modal-content">
-              <h2>{selectedCategory}</h2>
+              {/* <h2>{selectedCategory}</h2> */}
               <p className="category-message">{categoryMessage}</p>
               <button className="close-button" onClick={handleCloseModal}>
                 Close
