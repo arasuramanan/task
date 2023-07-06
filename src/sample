@@ -1,0 +1,32 @@
+import React from 'react';
+import './Grid.css';
+
+const Grid = () => {
+  const categories = [
+    { name: 'Animal', description: 'Unlimited Jokes On Animal' },
+    { name: 'Career', description: 'Unlimited Jokes On Career' }, { name: 'Celebrity', description: 'Unlimited Jokes On Celebrity' }, { name: 'Dev', description: 'Unlimited Jokes On Dev' }, { name: 'Explicit', description: 'Unlimited Jokes On Explicit' }, { name: 'Fashion', description: 'Unlimited Jokes On Fashion' }, { name: 'Food', description: 'Unlimited Jokes On Food' }, { name: 'History', description: 'Unlimited Jokes On History' },
+    { name: 'Money', description: 'Unlimited Jokes On Money' }, { name: 'Movie', description: 'Unlimited Jokes On Movie' }, { name: 'Music', description: 'Unlimited Jokes On Music' }, { name: 'Political', description: 'Unlimited Jokes On Political' }, { name: 'Religion', description: 'Unlimited Jokes On Religion' }, { name: 'Science', description: 'Unlimited Jokes On Science' }, { name: 'Sport', description: 'Unlimited Jokes On Sport' }, { name: 'Travel', description: 'Unlimited Jokes On Travel' }
+  ];
+
+  return (
+    <div>
+      <h1 className="heading">Chuck Norries</h1> {/* Add the heading here */}
+      <div className="grid">
+        {categories.map((category, index) => (
+          <div key={index} className="grid-item">
+            {typeof category === 'object' ? (
+              <>
+                <div className="category-name">{category.name}</div>
+                <div className="category-description">{category.description}</div>
+              </>
+            ) : (
+              category
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Grid;
